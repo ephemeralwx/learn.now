@@ -1,0 +1,257 @@
+import '/backend/api_requests/api_calls.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'y_t_ask_questions_to_y_t_model.dart';
+export 'y_t_ask_questions_to_y_t_model.dart';
+
+class YTAskQuestionsToYTWidget extends StatefulWidget {
+  const YTAskQuestionsToYTWidget({Key? key}) : super(key: key);
+
+  @override
+  _YTAskQuestionsToYTWidgetState createState() =>
+      _YTAskQuestionsToYTWidgetState();
+}
+
+class _YTAskQuestionsToYTWidgetState extends State<YTAskQuestionsToYTWidget> {
+  late YTAskQuestionsToYTModel _model;
+
+  @override
+  void setState(VoidCallback callback) {
+    super.setState(callback);
+    _model.onUpdate();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => YTAskQuestionsToYTModel());
+
+    _model.youtubeVidURLController ??= TextEditingController();
+    _model.youtubeVidURLFocusNode ??= FocusNode();
+    _model.questionController ??= TextEditingController();
+    _model.questionFocusNode ??= FocusNode();
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+  }
+
+  @override
+  void dispose() {
+    _model.maybeDispose();
+
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.transparent,
+      elevation: 5.0,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(0.0),
+          bottomRight: Radius.circular(0.0),
+          topLeft: Radius.circular(16.0),
+          topRight: Radius.circular(16.0),
+        ),
+      ),
+      child: Container(
+        width: double.infinity,
+        height: 370.0,
+        decoration: BoxDecoration(
+          color: FlutterFlowTheme.of(context).secondaryBackground,
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(0.0),
+            bottomRight: Radius.circular(0.0),
+            topLeft: Radius.circular(16.0),
+            topRight: Radius.circular(16.0),
+          ),
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+                    child: Container(
+                      width: 50.0,
+                      height: 4.0,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).alternate,
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
+                child: TextFormField(
+                  controller: _model.youtubeVidURLController,
+                  focusNode: _model.youtubeVidURLFocusNode,
+                  autofocus: true,
+                  obscureText: false,
+                  decoration: InputDecoration(
+                    labelText: 'Youtube Video URL...',
+                    labelStyle: FlutterFlowTheme.of(context).labelMedium,
+                    hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: FlutterFlowTheme.of(context).alternate,
+                        width: 2.0,
+                      ),
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: FlutterFlowTheme.of(context).primary,
+                        width: 2.0,
+                      ),
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    errorBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: FlutterFlowTheme.of(context).error,
+                        width: 2.0,
+                      ),
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    focusedErrorBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: FlutterFlowTheme.of(context).error,
+                        width: 2.0,
+                      ),
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                  ),
+                  style: FlutterFlowTheme.of(context).bodyMedium,
+                  validator: _model.youtubeVidURLControllerValidator
+                      .asValidator(context),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
+                child: TextFormField(
+                  controller: _model.questionController,
+                  focusNode: _model.questionFocusNode,
+                  autofocus: true,
+                  obscureText: false,
+                  decoration: InputDecoration(
+                    labelText: 'Question...',
+                    labelStyle: FlutterFlowTheme.of(context).labelMedium,
+                    hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: FlutterFlowTheme.of(context).alternate,
+                        width: 2.0,
+                      ),
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: FlutterFlowTheme.of(context).primary,
+                        width: 2.0,
+                      ),
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    errorBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: FlutterFlowTheme.of(context).error,
+                        width: 2.0,
+                      ),
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    focusedErrorBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: FlutterFlowTheme.of(context).error,
+                        width: 2.0,
+                      ),
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                  ),
+                  style: FlutterFlowTheme.of(context).bodyMedium,
+                  validator:
+                      _model.questionControllerValidator.asValidator(context),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(0.00, 0.00),
+                child: FFButtonWidget(
+                  onPressed: () async {
+                    _model.youtubeAskQuestionAPIResult =
+                        await YoutubeAskQuestionCall.call(
+                      youtubeUrl: _model.youtubeVidURLController.text,
+                      question: _model.questionController.text,
+                    );
+                    if ((_model.youtubeAskQuestionAPIResult?.succeeded ??
+                        true)) {
+                      context.pushNamed(
+                        'result',
+                        queryParameters: {
+                          'functionName': serializeParam(
+                            'Chat With Youtube Video',
+                            ParamType.String,
+                          ),
+                          'apiResult': serializeParam(
+                            getJsonField(
+                              (_model.youtubeAskQuestionAPIResult?.jsonBody ??
+                                  ''),
+                              r'''$.answer''',
+                            ).toString(),
+                            ParamType.String,
+                          ),
+                          'questionPrompt': serializeParam(
+                            _model.questionController.text,
+                            ParamType.String,
+                          ),
+                        }.withoutNulls,
+                        extra: <String, dynamic>{
+                          kTransitionInfoKey: TransitionInfo(
+                            hasTransition: true,
+                            transitionType: PageTransitionType.rightToLeft,
+                            duration: Duration(milliseconds: 300),
+                          ),
+                        },
+                      );
+                    }
+
+                    setState(() {});
+                  },
+                  text: 'Ask',
+                  options: FFButtonOptions(
+                    height: 40.0,
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                    iconPadding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    color: Color(0xFF62CBB6),
+                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                          fontFamily: 'Outfit',
+                          color: Colors.white,
+                        ),
+                    elevation: 3.0,
+                    borderSide: BorderSide(
+                      color: Colors.transparent,
+                      width: 1.0,
+                    ),
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "99543419499",
+    "project_id": "howtoapp-3efcd",
+    "storage_bucket": "howtoapp-3efcd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99543419499:android:9b67cc1201acd4b6a43f2e",
+        "android_client_info": {
+          "package_name": "com.mycompany.learnappcac"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBywBw7rbiSctVpHmehxqLn2M3z95DXszg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
