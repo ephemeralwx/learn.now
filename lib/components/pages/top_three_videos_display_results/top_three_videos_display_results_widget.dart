@@ -2,23 +2,19 @@ import '/components/youtube_video_info_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 import 'top_three_videos_display_results_model.dart';
 export 'top_three_videos_display_results_model.dart';
 
 class TopThreeVideosDisplayResultsWidget extends StatefulWidget {
   const TopThreeVideosDisplayResultsWidget({
-    Key? key,
+    super.key,
     required this.prompt,
     required this.apiResult,
     int? recency,
-  })  : this.recency = recency ?? 3,
-        super(key: key);
+  })  : recency = recency ?? 3;
 
   final String? prompt;
   final dynamic apiResult;
@@ -76,7 +72,7 @@ class _TopThreeVideosDisplayResultsWidgetState
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_rounded,
               color: Colors.white,
               size: 30.0,
@@ -93,7 +89,7 @@ class _TopThreeVideosDisplayResultsWidgetState
                   fontSize: 28.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 2.0,
         ),
@@ -108,8 +104,7 @@ class _TopThreeVideosDisplayResultsWidgetState
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
-                          25.0, 25.0, 25.0, 25.0),
+                      padding: const EdgeInsets.all(25.0),
                       child: Text(
                         'Prompt: ',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -120,7 +115,7 @@ class _TopThreeVideosDisplayResultsWidgetState
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 25.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 25.0, 0.0),
                       child: Text(
                         widget.prompt!,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -136,8 +131,7 @@ class _TopThreeVideosDisplayResultsWidgetState
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
+                    padding: const EdgeInsets.all(25.0),
                     child: Text(
                       'Recency: ',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -148,7 +142,7 @@ class _TopThreeVideosDisplayResultsWidgetState
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 25.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 25.0, 0.0),
                     child: Text(
                       widget.recency.toString(),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -165,8 +159,7 @@ class _TopThreeVideosDisplayResultsWidgetState
                 scrollDirection: Axis.vertical,
                 children: [
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 15.0),
+                    padding: const EdgeInsets.all(15.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -179,14 +172,15 @@ class _TopThreeVideosDisplayResultsWidgetState
                           enableDrag: false,
                           context: context,
                           builder: (context) {
-                            return GestureDetector(
+                            return WebViewAware(
+                                child: GestureDetector(
                               onTap: () => _model.unfocusNode.canRequestFocus
                                   ? FocusScope.of(context)
                                       .requestFocus(_model.unfocusNode)
                                   : FocusScope.of(context).unfocus(),
                               child: Padding(
                                 padding: MediaQuery.viewInsetsOf(context),
-                                child: Container(
+                                child: SizedBox(
                                   height:
                                       MediaQuery.sizeOf(context).height * 0.5,
                                   child: YoutubeVideoInfoWidget(
@@ -197,7 +191,7 @@ class _TopThreeVideosDisplayResultsWidgetState
                                   ),
                                 ),
                               ),
-                            );
+                            ));
                           },
                         ).then((value) => safeSetState(() {}));
                       },
@@ -205,7 +199,7 @@ class _TopThreeVideosDisplayResultsWidgetState
                         width: MediaQuery.sizeOf(context).width * 0.9,
                         height: MediaQuery.sizeOf(context).height * 0.18,
                         decoration: BoxDecoration(
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               blurRadius: 15.0,
                               color: Color(0x33000000),
@@ -213,7 +207,7 @@ class _TopThreeVideosDisplayResultsWidgetState
                               spreadRadius: 15.0,
                             )
                           ],
-                          gradient: LinearGradient(
+                          gradient: const LinearGradient(
                             colors: [Color(0xFFFFAFBD), Color(0xFFFFC3A0)],
                             stops: [0.0, 1.0],
                             begin: AlignmentDirectional(1.0, -1.0),
@@ -222,9 +216,9 @@ class _TopThreeVideosDisplayResultsWidgetState
                           borderRadius: BorderRadius.circular(15.0),
                         ),
                         child: Align(
-                          alignment: AlignmentDirectional(-1.00, -0.30),
+                          alignment: const AlignmentDirectional(-1.0, -0.3),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 25.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Video #1',
@@ -242,8 +236,7 @@ class _TopThreeVideosDisplayResultsWidgetState
                     ),
                   ),
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 15.0),
+                    padding: const EdgeInsets.all(15.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -256,14 +249,15 @@ class _TopThreeVideosDisplayResultsWidgetState
                           enableDrag: false,
                           context: context,
                           builder: (context) {
-                            return GestureDetector(
+                            return WebViewAware(
+                                child: GestureDetector(
                               onTap: () => _model.unfocusNode.canRequestFocus
                                   ? FocusScope.of(context)
                                       .requestFocus(_model.unfocusNode)
                                   : FocusScope.of(context).unfocus(),
                               child: Padding(
                                 padding: MediaQuery.viewInsetsOf(context),
-                                child: Container(
+                                child: SizedBox(
                                   height:
                                       MediaQuery.sizeOf(context).height * 0.5,
                                   child: YoutubeVideoInfoWidget(
@@ -274,7 +268,7 @@ class _TopThreeVideosDisplayResultsWidgetState
                                   ),
                                 ),
                               ),
-                            );
+                            ));
                           },
                         ).then((value) => safeSetState(() {}));
                       },
@@ -282,7 +276,7 @@ class _TopThreeVideosDisplayResultsWidgetState
                         width: MediaQuery.sizeOf(context).width * 0.9,
                         height: MediaQuery.sizeOf(context).height * 0.18,
                         decoration: BoxDecoration(
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               blurRadius: 15.0,
                               color: Color(0x33000000),
@@ -290,7 +284,7 @@ class _TopThreeVideosDisplayResultsWidgetState
                               spreadRadius: 15.0,
                             )
                           ],
-                          gradient: LinearGradient(
+                          gradient: const LinearGradient(
                             colors: [Color(0xFFFFAFBD), Color(0xFFFFC3A0)],
                             stops: [0.0, 1.0],
                             begin: AlignmentDirectional(0.94, -1.0),
@@ -299,9 +293,9 @@ class _TopThreeVideosDisplayResultsWidgetState
                           borderRadius: BorderRadius.circular(15.0),
                         ),
                         child: Align(
-                          alignment: AlignmentDirectional(-1.00, -0.30),
+                          alignment: const AlignmentDirectional(-1.0, -0.3),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 25.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Video #2',
@@ -319,8 +313,7 @@ class _TopThreeVideosDisplayResultsWidgetState
                     ),
                   ),
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 15.0),
+                    padding: const EdgeInsets.all(15.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -333,14 +326,15 @@ class _TopThreeVideosDisplayResultsWidgetState
                           enableDrag: false,
                           context: context,
                           builder: (context) {
-                            return GestureDetector(
+                            return WebViewAware(
+                                child: GestureDetector(
                               onTap: () => _model.unfocusNode.canRequestFocus
                                   ? FocusScope.of(context)
                                       .requestFocus(_model.unfocusNode)
                                   : FocusScope.of(context).unfocus(),
                               child: Padding(
                                 padding: MediaQuery.viewInsetsOf(context),
-                                child: Container(
+                                child: SizedBox(
                                   height:
                                       MediaQuery.sizeOf(context).height * 0.5,
                                   child: YoutubeVideoInfoWidget(
@@ -351,7 +345,7 @@ class _TopThreeVideosDisplayResultsWidgetState
                                   ),
                                 ),
                               ),
-                            );
+                            ));
                           },
                         ).then((value) => safeSetState(() {}));
                       },
@@ -359,7 +353,7 @@ class _TopThreeVideosDisplayResultsWidgetState
                         width: MediaQuery.sizeOf(context).width * 0.9,
                         height: MediaQuery.sizeOf(context).height * 0.18,
                         decoration: BoxDecoration(
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               blurRadius: 15.0,
                               color: Color(0x33000000),
@@ -367,7 +361,7 @@ class _TopThreeVideosDisplayResultsWidgetState
                               spreadRadius: 15.0,
                             )
                           ],
-                          gradient: LinearGradient(
+                          gradient: const LinearGradient(
                             colors: [Color(0xFFFFAFBD), Color(0xFFFFC3A0)],
                             stops: [0.0, 1.0],
                             begin: AlignmentDirectional(1.0, -0.94),
@@ -376,9 +370,9 @@ class _TopThreeVideosDisplayResultsWidgetState
                           borderRadius: BorderRadius.circular(15.0),
                         ),
                         child: Align(
-                          alignment: AlignmentDirectional(-1.00, -0.30),
+                          alignment: const AlignmentDirectional(-1.0, -0.3),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 25.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Video #3',

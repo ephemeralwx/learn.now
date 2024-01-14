@@ -6,20 +6,15 @@ import '/components/y_t_top_three_y_t_vids_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 import 'youtube_model.dart';
 export 'youtube_model.dart';
 
 class YoutubeWidget extends StatefulWidget {
-  const YoutubeWidget({Key? key}) : super(key: key);
+  const YoutubeWidget({super.key});
 
   @override
   _YoutubeWidgetState createState() => _YoutubeWidgetState();
@@ -46,8 +41,8 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.0, 70.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 70.0),
+          end: const Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -97,10 +92,11 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
             enableDrag: false,
             context: context,
             builder: (context) {
-              return Padding(
+              return WebViewAware(
+                  child: Padding(
                 padding: MediaQuery.viewInsetsOf(context),
-                child: InformationWidget(),
-              );
+                child: const InformationWidget(),
+              ));
             },
           ).then((value) => safeSetState(() {}));
         },
@@ -122,7 +118,7 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                 color: FlutterFlowTheme.of(context).white,
               ),
         ),
-        actions: [],
+        actions: const [],
         centerTitle: false,
         elevation: 0.0,
       ),
@@ -144,20 +140,20 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
             ),
             Expanded(
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                 child: ListView(
                   padding: EdgeInsets.zero,
                   scrollDirection: Axis.vertical,
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 1.0,
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               blurRadius: 5.0,
                               color: Color(0x230E151B),
@@ -173,7 +169,7 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 10.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -187,10 +183,11 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                                 enableDrag: false,
                                 context: context,
                                 builder: (context) {
-                                  return Padding(
+                                  return WebViewAware(
+                                      child: Padding(
                                     padding: MediaQuery.viewInsetsOf(context),
-                                    child: YTTopThreeYTVidsWidget(),
-                                  );
+                                    child: const YTTopThreeYTVidsWidget(),
+                                  ));
                                 },
                               ).then((value) => safeSetState(() {}));
                             },
@@ -198,7 +195,7 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                               width: MediaQuery.sizeOf(context).width * 0.9,
                               height: 110.0,
                               decoration: BoxDecoration(
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 2.0,
                                     color: Color(0x33000000),
@@ -209,11 +206,11 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                                 gradient: LinearGradient(
                                   colors: [
                                     FlutterFlowTheme.of(context).primary,
-                                    Color(0xFF57C7AD)
+                                    const Color(0xFF57C7AD)
                                   ],
-                                  stops: [0.0, 1.0],
-                                  begin: AlignmentDirectional(1.0, 0.0),
-                                  end: AlignmentDirectional(-1.0, 0),
+                                  stops: const [0.0, 1.0],
+                                  begin: const AlignmentDirectional(1.0, 0.0),
+                                  end: const AlignmentDirectional(-1.0, 0),
                                 ),
                                 borderRadius: BorderRadius.circular(25.0),
                               ),
@@ -221,10 +218,9 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment:
-                                        AlignmentDirectional(-1.00, 0.00),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           25.0, 23.0, 0.0, 0.0),
                                       child: Text(
                                         'Top Video Query',
@@ -239,10 +235,9 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment:
-                                        AlignmentDirectional(-1.00, 0.00),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           25.0, 5.0, 10.0, 0.0),
                                       child: Text(
                                         'You enter a prompt, we use an algorithm to find the 3 most fitting videos for your needs',
@@ -261,7 +256,7 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 10.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -275,10 +270,11 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                                 enableDrag: false,
                                 context: context,
                                 builder: (context) {
-                                  return Padding(
+                                  return WebViewAware(
+                                      child: Padding(
                                     padding: MediaQuery.viewInsetsOf(context),
-                                    child: YTAskQuestionsToYTWidget(),
-                                  );
+                                    child: const YTAskQuestionsToYTWidget(),
+                                  ));
                                 },
                               ).then((value) => safeSetState(() {}));
                             },
@@ -286,7 +282,7 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                               width: MediaQuery.sizeOf(context).width * 0.9,
                               height: 109.0,
                               decoration: BoxDecoration(
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 2.0,
                                     color: Color(0x33000000),
@@ -297,11 +293,11 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                                 gradient: LinearGradient(
                                   colors: [
                                     FlutterFlowTheme.of(context).primary,
-                                    Color(0xFF58BCA8)
+                                    const Color(0xFF58BCA8)
                                   ],
-                                  stops: [0.3, 1.0],
-                                  begin: AlignmentDirectional(1.0, 0.87),
-                                  end: AlignmentDirectional(-1.0, -0.87),
+                                  stops: const [0.3, 1.0],
+                                  begin: const AlignmentDirectional(1.0, 0.87),
+                                  end: const AlignmentDirectional(-1.0, -0.87),
                                 ),
                                 borderRadius: BorderRadius.circular(25.0),
                                 shape: BoxShape.rectangle,
@@ -310,10 +306,9 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment:
-                                        AlignmentDirectional(-1.00, 0.00),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           25.0, 20.0, 0.0, 0.0),
                                       child: Text(
                                         'Talk to a Video',
@@ -328,10 +323,9 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment:
-                                        AlignmentDirectional(-1.00, 0.00),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           25.0, 10.0, 10.0, 0.0),
                                       child: Text(
                                         'Chat To and Ask Questions about any youtube video ',
@@ -346,7 +340,7 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 10.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -360,10 +354,11 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                                 enableDrag: false,
                                 context: context,
                                 builder: (context) {
-                                  return Padding(
+                                  return WebViewAware(
+                                      child: Padding(
                                     padding: MediaQuery.viewInsetsOf(context),
-                                    child: YTGetSummaryWidget(),
-                                  );
+                                    child: const YTGetSummaryWidget(),
+                                  ));
                                 },
                               ).then((value) => safeSetState(() {}));
                             },
@@ -371,7 +366,7 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                               width: MediaQuery.sizeOf(context).width * 0.9,
                               height: 110.0,
                               decoration: BoxDecoration(
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 2.0,
                                     color: Color(0x33000000),
@@ -382,11 +377,11 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                                 gradient: LinearGradient(
                                   colors: [
                                     FlutterFlowTheme.of(context).primary,
-                                    Color(0xFF57C7AD)
+                                    const Color(0xFF57C7AD)
                                   ],
-                                  stops: [0.0, 1.0],
-                                  begin: AlignmentDirectional(1.0, 0.0),
-                                  end: AlignmentDirectional(-1.0, 0),
+                                  stops: const [0.0, 1.0],
+                                  begin: const AlignmentDirectional(1.0, 0.0),
+                                  end: const AlignmentDirectional(-1.0, 0),
                                 ),
                                 borderRadius: BorderRadius.circular(25.0),
                               ),
@@ -394,10 +389,9 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment:
-                                        AlignmentDirectional(-1.00, 0.00),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           25.0, 25.0, 0.0, 0.0),
                                       child: Text(
                                         'Get Summary',
@@ -412,10 +406,9 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment:
-                                        AlignmentDirectional(-1.00, 0.00),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           25.0, 10.0, 10.0, 0.0),
                                       child: Text(
                                         'Summarize the content of any youtube video',
@@ -430,7 +423,7 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 15.0, 0.0, 15.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -444,10 +437,11 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                                 enableDrag: false,
                                 context: context,
                                 builder: (context) {
-                                  return Padding(
+                                  return WebViewAware(
+                                      child: Padding(
                                     padding: MediaQuery.viewInsetsOf(context),
-                                    child: YTExtractHowToGuideWidget(),
-                                  );
+                                    child: const YTExtractHowToGuideWidget(),
+                                  ));
                                 },
                               ).then((value) => safeSetState(() {}));
                             },
@@ -455,7 +449,7 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                               width: MediaQuery.sizeOf(context).width * 0.9,
                               height: 110.0,
                               decoration: BoxDecoration(
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 2.0,
                                     color: Color(0x33000000),
@@ -466,11 +460,11 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                                 gradient: LinearGradient(
                                   colors: [
                                     FlutterFlowTheme.of(context).primary,
-                                    Color(0xFF50D2B8)
+                                    const Color(0xFF50D2B8)
                                   ],
-                                  stops: [0.2, 1.0],
-                                  begin: AlignmentDirectional(0.87, 1.0),
-                                  end: AlignmentDirectional(-0.87, -1.0),
+                                  stops: const [0.2, 1.0],
+                                  begin: const AlignmentDirectional(0.87, 1.0),
+                                  end: const AlignmentDirectional(-0.87, -1.0),
                                 ),
                                 borderRadius: BorderRadius.circular(25.0),
                               ),
@@ -478,10 +472,9 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment:
-                                        AlignmentDirectional(-1.00, 0.00),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           25.0, 25.0, 0.0, 0.0),
                                       child: Text(
                                         'Get How-To Guide',
@@ -496,10 +489,9 @@ class _YoutubeWidgetState extends State<YoutubeWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment:
-                                        AlignmentDirectional(-1.00, 0.00),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           25.0, 10.0, 10.0, 0.0),
                                       child: Text(
                                         'Extract a How-To guide from any youtube video',

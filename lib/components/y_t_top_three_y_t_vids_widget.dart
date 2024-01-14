@@ -4,14 +4,11 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'y_t_top_three_y_t_vids_model.dart';
 export 'y_t_top_three_y_t_vids_model.dart';
 
 class YTTopThreeYTVidsWidget extends StatefulWidget {
-  const YTTopThreeYTVidsWidget({Key? key}) : super(key: key);
+  const YTTopThreeYTVidsWidget({super.key});
 
   @override
   _YTTopThreeYTVidsWidgetState createState() => _YTTopThreeYTVidsWidgetState();
@@ -33,8 +30,10 @@ class _YTTopThreeYTVidsWidgetState extends State<YTTopThreeYTVidsWidget> {
 
     _model.promptController ??= TextEditingController();
     _model.promptFocusNode ??= FocusNode();
+
     _model.recencyController ??= TextEditingController(text: '3');
     _model.recencyFocusNode ??= FocusNode();
+
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -50,7 +49,7 @@ class _YTTopThreeYTVidsWidgetState extends State<YTTopThreeYTVidsWidget> {
     return Material(
       color: Colors.transparent,
       elevation: 5.0,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
@@ -63,7 +62,7 @@ class _YTTopThreeYTVidsWidgetState extends State<YTTopThreeYTVidsWidget> {
         height: 370.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(0.0),
             bottomRight: Radius.circular(0.0),
             topLeft: Radius.circular(16.0),
@@ -81,7 +80,7 @@ class _YTTopThreeYTVidsWidgetState extends State<YTTopThreeYTVidsWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                     child: Container(
                       width: 50.0,
                       height: 4.0,
@@ -94,7 +93,7 @@ class _YTTopThreeYTVidsWidgetState extends State<YTTopThreeYTVidsWidget> {
                 ],
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
+                padding: const EdgeInsets.all(25.0),
                 child: TextFormField(
                   controller: _model.promptController,
                   focusNode: _model.promptFocusNode,
@@ -139,7 +138,7 @@ class _YTTopThreeYTVidsWidgetState extends State<YTTopThreeYTVidsWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
+                padding: const EdgeInsets.all(25.0),
                 child: TextFormField(
                   controller: _model.recencyController,
                   focusNode: _model.recencyFocusNode,
@@ -188,7 +187,7 @@ class _YTTopThreeYTVidsWidgetState extends State<YTTopThreeYTVidsWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.00, 0.00),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: FFButtonWidget(
                   onPressed: () async {
                     _model.youtubeTopThreeVideosAPIResult =
@@ -219,7 +218,7 @@ class _YTTopThreeYTVidsWidgetState extends State<YTTopThreeYTVidsWidget> {
                           ),
                         }.withoutNulls,
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
+                          kTransitionInfoKey: const TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.rightToLeft,
                             duration: Duration(milliseconds: 300),
@@ -234,16 +233,16 @@ class _YTTopThreeYTVidsWidgetState extends State<YTTopThreeYTVidsWidget> {
                   options: FFButtonOptions(
                     height: 40.0,
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                     iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: Color(0xFF62CBB6),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    color: const Color(0xFF62CBB6),
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Outfit',
                           color: Colors.white,
                         ),
                     elevation: 3.0,
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.transparent,
                       width: 1.0,
                     ),

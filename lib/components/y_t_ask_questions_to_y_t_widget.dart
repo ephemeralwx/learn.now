@@ -3,15 +3,11 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'y_t_ask_questions_to_y_t_model.dart';
 export 'y_t_ask_questions_to_y_t_model.dart';
 
 class YTAskQuestionsToYTWidget extends StatefulWidget {
-  const YTAskQuestionsToYTWidget({Key? key}) : super(key: key);
+  const YTAskQuestionsToYTWidget({super.key});
 
   @override
   _YTAskQuestionsToYTWidgetState createState() =>
@@ -34,8 +30,10 @@ class _YTAskQuestionsToYTWidgetState extends State<YTAskQuestionsToYTWidget> {
 
     _model.youtubeVidURLController ??= TextEditingController();
     _model.youtubeVidURLFocusNode ??= FocusNode();
+
     _model.questionController ??= TextEditingController();
     _model.questionFocusNode ??= FocusNode();
+
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -51,7 +49,7 @@ class _YTAskQuestionsToYTWidgetState extends State<YTAskQuestionsToYTWidget> {
     return Material(
       color: Colors.transparent,
       elevation: 5.0,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
@@ -64,7 +62,7 @@ class _YTAskQuestionsToYTWidgetState extends State<YTAskQuestionsToYTWidget> {
         height: 370.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(0.0),
             bottomRight: Radius.circular(0.0),
             topLeft: Radius.circular(16.0),
@@ -82,7 +80,7 @@ class _YTAskQuestionsToYTWidgetState extends State<YTAskQuestionsToYTWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                     child: Container(
                       width: 50.0,
                       height: 4.0,
@@ -95,7 +93,7 @@ class _YTAskQuestionsToYTWidgetState extends State<YTAskQuestionsToYTWidget> {
                 ],
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
+                padding: const EdgeInsets.all(25.0),
                 child: TextFormField(
                   controller: _model.youtubeVidURLController,
                   focusNode: _model.youtubeVidURLFocusNode,
@@ -140,7 +138,7 @@ class _YTAskQuestionsToYTWidgetState extends State<YTAskQuestionsToYTWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
+                padding: const EdgeInsets.all(25.0),
                 child: TextFormField(
                   controller: _model.questionController,
                   focusNode: _model.questionFocusNode,
@@ -185,7 +183,7 @@ class _YTAskQuestionsToYTWidgetState extends State<YTAskQuestionsToYTWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.00, 0.00),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: FFButtonWidget(
                   onPressed: () async {
                     _model.youtubeAskQuestionAPIResult =
@@ -216,7 +214,7 @@ class _YTAskQuestionsToYTWidgetState extends State<YTAskQuestionsToYTWidget> {
                           ),
                         }.withoutNulls,
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
+                          kTransitionInfoKey: const TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.rightToLeft,
                             duration: Duration(milliseconds: 300),
@@ -231,16 +229,16 @@ class _YTAskQuestionsToYTWidgetState extends State<YTAskQuestionsToYTWidget> {
                   options: FFButtonOptions(
                     height: 40.0,
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                     iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: Color(0xFF62CBB6),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    color: const Color(0xFF62CBB6),
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Outfit',
                           color: Colors.white,
                         ),
                     elevation: 3.0,
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.transparent,
                       width: 1.0,
                     ),

@@ -1,7 +1,7 @@
 // Export pages
 export '/components/pages/splash_screen/splash_screen_widget.dart'
     show SplashScreenWidget;
-export '/components/pages/login/login_widget.dart' show LoginWidget;
+export '/components/login/login_widget.dart' show LoginWidget;
 export '/components/pages/register/register_widget.dart' show RegisterWidget;
 export '/components/pages/website/website_widget.dart' show WebsiteWidget;
 export '/components/pages/edit_profile/edit_profile_widget.dart'

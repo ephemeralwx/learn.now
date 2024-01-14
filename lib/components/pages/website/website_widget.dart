@@ -5,19 +5,15 @@ import '/components/w_e_b_s_i_t_e_generate_summary_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 import 'website_model.dart';
 export 'website_model.dart';
 
 class WebsiteWidget extends StatefulWidget {
-  const WebsiteWidget({Key? key}) : super(key: key);
+  const WebsiteWidget({super.key});
 
   @override
   _WebsiteWidgetState createState() => _WebsiteWidgetState();
@@ -44,8 +40,8 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.0, 70.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 70.0),
+          end: const Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -95,10 +91,11 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
             enableDrag: false,
             context: context,
             builder: (context) {
-              return Padding(
+              return WebViewAware(
+                  child: Padding(
                 padding: MediaQuery.viewInsetsOf(context),
-                child: InformationWidget(),
-              );
+                child: const InformationWidget(),
+              ));
             },
           ).then((value) => safeSetState(() {}));
         },
@@ -120,7 +117,7 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
                 color: FlutterFlowTheme.of(context).white,
               ),
         ),
-        actions: [],
+        actions: const [],
         centerTitle: false,
         elevation: 0.0,
       ),
@@ -142,20 +139,20 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
             ),
             Expanded(
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                 child: ListView(
                   padding: EdgeInsets.zero,
                   scrollDirection: Axis.vertical,
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 1.0,
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               blurRadius: 5.0,
                               color: Color(0x230E151B),
@@ -171,7 +168,7 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 10.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -185,10 +182,11 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
                                 enableDrag: false,
                                 context: context,
                                 builder: (context) {
-                                  return Padding(
+                                  return WebViewAware(
+                                      child: Padding(
                                     padding: MediaQuery.viewInsetsOf(context),
-                                    child: WEBSITEGenerateSummaryWidget(),
-                                  );
+                                    child: const WEBSITEGenerateSummaryWidget(),
+                                  ));
                                 },
                               ).then((value) => safeSetState(() {}));
                             },
@@ -196,7 +194,7 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
                               width: MediaQuery.sizeOf(context).width * 0.9,
                               height: 150.0,
                               decoration: BoxDecoration(
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 2.0,
                                     color: Color(0x33000000),
@@ -207,11 +205,11 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
                                 gradient: LinearGradient(
                                   colors: [
                                     FlutterFlowTheme.of(context).primary,
-                                    Color(0xFF57C7AD)
+                                    const Color(0xFF57C7AD)
                                   ],
-                                  stops: [0.0, 1.0],
-                                  begin: AlignmentDirectional(1.0, 0.0),
-                                  end: AlignmentDirectional(-1.0, 0),
+                                  stops: const [0.0, 1.0],
+                                  begin: const AlignmentDirectional(1.0, 0.0),
+                                  end: const AlignmentDirectional(-1.0, 0),
                                 ),
                                 borderRadius: BorderRadius.circular(25.0),
                               ),
@@ -219,10 +217,9 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment:
-                                        AlignmentDirectional(-1.00, 0.00),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           25.0, 23.0, 0.0, 0.0),
                                       child: Text(
                                         'Generate Summary',
@@ -237,10 +234,9 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment:
-                                        AlignmentDirectional(-1.00, 0.00),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           25.0, 10.0, 10.0, 0.0),
                                       child: Text(
                                         'Extract a summary of any website given the link',
@@ -259,7 +255,7 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 10.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -273,10 +269,11 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
                                 enableDrag: false,
                                 context: context,
                                 builder: (context) {
-                                  return Padding(
+                                  return WebViewAware(
+                                      child: Padding(
                                     padding: MediaQuery.viewInsetsOf(context),
-                                    child: WEBSITEGenerateHowToGuideWidget(),
-                                  );
+                                    child: const WEBSITEGenerateHowToGuideWidget(),
+                                  ));
                                 },
                               ).then((value) => safeSetState(() {}));
                             },
@@ -284,7 +281,7 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
                               width: MediaQuery.sizeOf(context).width * 0.9,
                               height: 150.0,
                               decoration: BoxDecoration(
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 2.0,
                                     color: Color(0x33000000),
@@ -295,11 +292,11 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
                                 gradient: LinearGradient(
                                   colors: [
                                     FlutterFlowTheme.of(context).primary,
-                                    Color(0xFF57C7AD)
+                                    const Color(0xFF57C7AD)
                                   ],
-                                  stops: [0.0, 1.0],
-                                  begin: AlignmentDirectional(1.0, 0.0),
-                                  end: AlignmentDirectional(-1.0, 0),
+                                  stops: const [0.0, 1.0],
+                                  begin: const AlignmentDirectional(1.0, 0.0),
+                                  end: const AlignmentDirectional(-1.0, 0),
                                 ),
                                 borderRadius: BorderRadius.circular(25.0),
                               ),
@@ -307,10 +304,9 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment:
-                                        AlignmentDirectional(-1.00, 0.00),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           25.0, 23.0, 0.0, 0.0),
                                       child: Text(
                                         'Generate How-To Guide',
@@ -325,10 +321,9 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment:
-                                        AlignmentDirectional(-1.00, 0.00),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           25.0, 5.0, 10.0, 0.0),
                                       child: Text(
                                         'Extract a How-To guide from any website',
@@ -347,7 +342,7 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 10.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -361,10 +356,11 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
                                 enableDrag: false,
                                 context: context,
                                 builder: (context) {
-                                  return Padding(
+                                  return WebViewAware(
+                                      child: Padding(
                                     padding: MediaQuery.viewInsetsOf(context),
-                                    child: WEBSITEAskQuestionToWebsiteWidget(),
-                                  );
+                                    child: const WEBSITEAskQuestionToWebsiteWidget(),
+                                  ));
                                 },
                               ).then((value) => safeSetState(() {}));
                             },
@@ -372,7 +368,7 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
                               width: MediaQuery.sizeOf(context).width * 0.9,
                               height: 150.0,
                               decoration: BoxDecoration(
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 2.0,
                                     color: Color(0x33000000),
@@ -383,11 +379,11 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
                                 gradient: LinearGradient(
                                   colors: [
                                     FlutterFlowTheme.of(context).primary,
-                                    Color(0xFF57C7AD)
+                                    const Color(0xFF57C7AD)
                                   ],
-                                  stops: [0.0, 1.0],
-                                  begin: AlignmentDirectional(1.0, 0.0),
-                                  end: AlignmentDirectional(-1.0, 0),
+                                  stops: const [0.0, 1.0],
+                                  begin: const AlignmentDirectional(1.0, 0.0),
+                                  end: const AlignmentDirectional(-1.0, 0),
                                 ),
                                 borderRadius: BorderRadius.circular(25.0),
                               ),
@@ -395,10 +391,9 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment:
-                                        AlignmentDirectional(-1.00, 0.00),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           25.0, 23.0, 0.0, 0.0),
                                       child: Text(
                                         'Talk to an Article/Website',
@@ -413,10 +408,9 @@ class _WebsiteWidgetState extends State<WebsiteWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment:
-                                        AlignmentDirectional(-1.00, 0.00),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           25.0, 5.0, 10.0, 0.0),
                                       child: Text(
                                         'Chat To and Ask Questions about any website/article ',

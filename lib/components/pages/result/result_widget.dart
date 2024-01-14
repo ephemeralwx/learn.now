@@ -1,22 +1,18 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'result_model.dart';
 export 'result_model.dart';
 
 class ResultWidget extends StatefulWidget {
   const ResultWidget({
-    Key? key,
+    super.key,
     this.functionName,
     this.questionPrompt,
     required this.apiResult,
-  }) : super(key: key);
+  });
 
   final String? functionName;
   final String? questionPrompt;
@@ -72,7 +68,7 @@ class _ResultWidgetState extends State<ResultWidget> {
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_rounded,
               color: Colors.white,
               size: 30.0,
@@ -89,7 +85,7 @@ class _ResultWidgetState extends State<ResultWidget> {
                   fontSize: 22.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -102,15 +98,15 @@ class _ResultWidgetState extends State<ResultWidget> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(0.00, 0.00),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 0.9,
                         height: 100.0,
                         decoration: BoxDecoration(
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               blurRadius: 5.0,
                               color: Color(0x33000000),
@@ -118,7 +114,7 @@ class _ResultWidgetState extends State<ResultWidget> {
                               spreadRadius: 5.0,
                             )
                           ],
-                          gradient: LinearGradient(
+                          gradient: const LinearGradient(
                             colors: [Color(0xFF6932BF), Color(0xFFF9A432)],
                             stops: [0.0, 1.0],
                             begin: AlignmentDirectional(0.1, -1.0),
@@ -127,8 +123,7 @@ class _ResultWidgetState extends State<ResultWidget> {
                           borderRadius: BorderRadius.circular(15.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              25.0, 25.0, 25.0, 25.0),
+                          padding: const EdgeInsets.all(25.0),
                           child: Text(
                             widget.functionName!,
                             style: FlutterFlowTheme.of(context).bodyMedium,
@@ -141,16 +136,14 @@ class _ResultWidgetState extends State<ResultWidget> {
               ),
               Flexible(
                 child: Padding(
-                  padding:
-                      EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
+                  padding: const EdgeInsets.all(20.0),
                   child: ListView(
                     padding: EdgeInsets.zero,
                     shrinkWrap: true,
                     scrollDirection: Axis.vertical,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            25.0, 25.0, 25.0, 25.0),
+                        padding: const EdgeInsets.all(25.0),
                         child: Text(
                           widget.apiResult!,
                           textAlign: TextAlign.start,
@@ -162,7 +155,7 @@ class _ResultWidgetState extends State<ResultWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.00, 0.00),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Text(
                           '----',
                           style:

@@ -3,15 +3,11 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'w_e_b_s_i_t_e_ask_question_to_website_model.dart';
 export 'w_e_b_s_i_t_e_ask_question_to_website_model.dart';
 
 class WEBSITEAskQuestionToWebsiteWidget extends StatefulWidget {
-  const WEBSITEAskQuestionToWebsiteWidget({Key? key}) : super(key: key);
+  const WEBSITEAskQuestionToWebsiteWidget({super.key});
 
   @override
   _WEBSITEAskQuestionToWebsiteWidgetState createState() =>
@@ -35,8 +31,10 @@ class _WEBSITEAskQuestionToWebsiteWidgetState
 
     _model.websiteURLController ??= TextEditingController();
     _model.websiteURLFocusNode ??= FocusNode();
+
     _model.questionpromptController ??= TextEditingController();
     _model.questionpromptFocusNode ??= FocusNode();
+
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -52,7 +50,7 @@ class _WEBSITEAskQuestionToWebsiteWidgetState
     return Material(
       color: Colors.transparent,
       elevation: 5.0,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
@@ -65,7 +63,7 @@ class _WEBSITEAskQuestionToWebsiteWidgetState
         height: 370.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(0.0),
             bottomRight: Radius.circular(0.0),
             topLeft: Radius.circular(16.0),
@@ -83,7 +81,7 @@ class _WEBSITEAskQuestionToWebsiteWidgetState
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                     child: Container(
                       width: 50.0,
                       height: 4.0,
@@ -96,7 +94,7 @@ class _WEBSITEAskQuestionToWebsiteWidgetState
                 ],
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
+                padding: const EdgeInsets.all(25.0),
                 child: TextFormField(
                   controller: _model.websiteURLController,
                   focusNode: _model.websiteURLFocusNode,
@@ -141,7 +139,7 @@ class _WEBSITEAskQuestionToWebsiteWidgetState
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
+                padding: const EdgeInsets.all(25.0),
                 child: TextFormField(
                   controller: _model.questionpromptController,
                   focusNode: _model.questionpromptFocusNode,
@@ -186,7 +184,7 @@ class _WEBSITEAskQuestionToWebsiteWidgetState
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.00, 0.00),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: FFButtonWidget(
                   onPressed: () async {
                     _model.websiteAskQuestionAPIResult =
@@ -213,7 +211,7 @@ class _WEBSITEAskQuestionToWebsiteWidgetState
                           ),
                         }.withoutNulls,
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
+                          kTransitionInfoKey: const TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.rightToLeft,
                             duration: Duration(milliseconds: 300),
@@ -228,16 +226,16 @@ class _WEBSITEAskQuestionToWebsiteWidgetState
                   options: FFButtonOptions(
                     height: 40.0,
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                     iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: Color(0xFF62CBB6),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    color: const Color(0xFF62CBB6),
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Outfit',
                           color: Colors.white,
                         ),
                     elevation: 3.0,
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.transparent,
                       width: 1.0,
                     ),

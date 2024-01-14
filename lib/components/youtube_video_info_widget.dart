@@ -2,18 +2,14 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_youtube_player.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'youtube_video_info_model.dart';
 export 'youtube_video_info_model.dart';
 
 class YoutubeVideoInfoWidget extends StatefulWidget {
   const YoutubeVideoInfoWidget({
-    Key? key,
+    super.key,
     required this.apiInfo,
-  }) : super(key: key);
+  });
 
   final dynamic apiInfo;
 
@@ -50,7 +46,7 @@ class _YoutubeVideoInfoWidgetState extends State<YoutubeVideoInfoWidget> {
     return Material(
       color: Colors.transparent,
       elevation: 5.0,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
@@ -63,7 +59,7 @@ class _YoutubeVideoInfoWidgetState extends State<YoutubeVideoInfoWidget> {
         height: 370.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(0.0),
             bottomRight: Radius.circular(0.0),
             topLeft: Radius.circular(16.0),
@@ -81,7 +77,7 @@ class _YoutubeVideoInfoWidgetState extends State<YoutubeVideoInfoWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                     child: Container(
                       width: 50.0,
                       height: 4.0,
@@ -98,10 +94,9 @@ class _YoutubeVideoInfoWidgetState extends State<YoutubeVideoInfoWidget> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(-0.70, 0.00),
+                    alignment: const AlignmentDirectional(-0.7, 0.0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
-                          25.0, 25.0, 25.0, 25.0),
+                      padding: const EdgeInsets.all(25.0),
                       child: Text(
                         'INFO',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -113,15 +108,15 @@ class _YoutubeVideoInfoWidgetState extends State<YoutubeVideoInfoWidget> {
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(1.00, 0.00),
+                    alignment: const AlignmentDirectional(1.0, 0.0),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                       child: FlutterFlowYoutubePlayer(
                         url: getJsonField(
                           widget.apiInfo,
                           r'''$.link''',
-                        ),
+                        ).toString(),
                         width: MediaQuery.sizeOf(context).width * 0.5,
                         autoPlay: false,
                         looping: true,
@@ -132,10 +127,10 @@ class _YoutubeVideoInfoWidgetState extends State<YoutubeVideoInfoWidget> {
                       ),
                     ),
                   ),
-                ].divide(SizedBox(width: 5.0)).addToStart(SizedBox(width: 5.0)),
+                ].divide(const SizedBox(width: 5.0)).addToStart(const SizedBox(width: 5.0)),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
+                padding: const EdgeInsets.all(25.0),
                 child: Text(
                   valueOrDefault<String>(
                     widget.apiInfo?.toString(),

@@ -152,15 +152,15 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color error = const Color(0xFFE21C3D);
   late Color info = const Color(0xFF1C4494);
 
-  late Color white = Color(0xFFFFFFFF);
-  late Color lineColor = Color(0xFFDBE2E7);
-  late Color darkBG = Color(0xFF1A1F24);
-  late Color primaryBlack = Color(0xFF131619);
-  late Color sunset = Color(0xFFF6D8AE);
-  late Color charcoal = Color(0xFF2E4057);
-  late Color mountbattenPink = Color(0xFF957186);
-  late Color verdigris = Color(0xFF48A9A6);
-  late Color roseQuartz = Color(0xFFA690A4);
+  late Color white = const Color(0xFFFFFFFF);
+  late Color lineColor = const Color(0xFFDBE2E7);
+  late Color darkBG = const Color(0xFF1A1F24);
+  late Color primaryBlack = const Color(0xFF131619);
+  late Color sunset = const Color(0xFFF6D8AE);
+  late Color charcoal = const Color(0xFF2E4057);
+  late Color mountbattenPink = const Color(0xFF957186);
+  late Color verdigris = const Color(0xFF48A9A6);
+  late Color roseQuartz = const Color(0xFFA690A4);
 }
 
 abstract class Typography {
@@ -333,15 +333,15 @@ class DarkModeTheme extends FlutterFlowTheme {
   late Color error = const Color(0xFFE21C3D);
   late Color info = const Color(0xFF1C4494);
 
-  late Color white = Color(0xFFFFFFFF);
-  late Color lineColor = Color(0xFF262D34);
-  late Color darkBG = Color(0xFF1A1F24);
-  late Color primaryBlack = Color(0xFF131619);
-  late Color sunset = Color(0xFFF6D8AE);
-  late Color charcoal = Color(0xFF2E4057);
-  late Color mountbattenPink = Color(0xFF957186);
-  late Color verdigris = Color(0xFF48A9A6);
-  late Color roseQuartz = Color(0xFFA690A4);
+  late Color white = const Color(0xFFFFFFFF);
+  late Color lineColor = const Color(0xFF262D34);
+  late Color darkBG = const Color(0xFF1A1F24);
+  late Color primaryBlack = const Color(0xFF131619);
+  late Color sunset = const Color(0xFFF6D8AE);
+  late Color charcoal = const Color(0xFF2E4057);
+  late Color mountbattenPink = const Color(0xFF957186);
+  late Color verdigris = const Color(0xFF48A9A6);
+  late Color roseQuartz = const Color(0xFFA690A4);
 }
 
 extension TextStyleHelper on TextStyle {

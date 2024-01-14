@@ -1,7 +1,5 @@
 import 'dart:convert';
-import 'dart:typed_data';
 
-import '/flutter_flow/flutter_flow_util.dart';
 import 'api_manager.dart';
 
 export 'api_manager.dart' show ApiCallResponse;
@@ -15,7 +13,7 @@ class WebsiteGenSummaryCall {
     return ApiManager.instance.makeApiCall(
       callName: 'WebsiteGenSummary',
       apiUrl:
-          'https://summarizewebsite.onrender.com/generate_summary?url=${url}',
+          'https://summarizewebsite.onrender.com/generate_summary?url=$url',
       callType: ApiCallType.GET,
       headers: {
         'Content-Type': 'application/json',
@@ -27,6 +25,7 @@ class WebsiteGenSummaryCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -38,7 +37,7 @@ class WebsiteGenHowToGuideCall {
     return ApiManager.instance.makeApiCall(
       callName: 'WebsiteGenHowToGuide',
       apiUrl:
-          'https://summarizewebsite.onrender.com/generate_howto_guide?url=${url}',
+          'https://summarizewebsite.onrender.com/generate_howto_guide?url=$url',
       callType: ApiCallType.GET,
       headers: {
         'Content-Type': 'application/json',
@@ -50,6 +49,7 @@ class WebsiteGenHowToGuideCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -61,8 +61,8 @@ class WebsiteAskQuestionCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "url": "${url}",
-  "question": "${question}"
+  "url": "$url",
+  "question": "$question"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'WebsiteAskQuestion',
@@ -78,6 +78,7 @@ class WebsiteAskQuestionCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -89,7 +90,7 @@ class YoutubeGetSummaryCall {
     return ApiManager.instance.makeApiCall(
       callName: 'YoutubeGetSummary',
       apiUrl:
-          'https://allinoneytapi.onrender.com/get_summary?youtube_url=${youtubeUrl}',
+          'https://allinoneytapi.onrender.com/get_summary?youtube_url=$youtubeUrl',
       callType: ApiCallType.GET,
       headers: {
         'Content-Type': 'application/json',
@@ -101,6 +102,7 @@ class YoutubeGetSummaryCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -112,7 +114,7 @@ class YoutubeGetHowToGuideCall {
     return ApiManager.instance.makeApiCall(
       callName: 'YoutubeGetHowToGuide',
       apiUrl:
-          'https://allinoneytapi.onrender.com/get_howto_guide?youtube_url=${youtubeUrl}',
+          'https://allinoneytapi.onrender.com/get_howto_guide?youtube_url=$youtubeUrl',
       callType: ApiCallType.GET,
       headers: {
         'Content-Type': 'application/json',
@@ -124,6 +126,7 @@ class YoutubeGetHowToGuideCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -135,8 +138,8 @@ class YoutubeAskQuestionCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "youtube_url": "${youtubeUrl}",
-  "question": "${question}"
+  "youtube_url": "$youtubeUrl",
+  "question": "$question"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'YoutubeAskQuestion',
@@ -152,6 +155,7 @@ class YoutubeAskQuestionCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 }
@@ -163,8 +167,8 @@ class YoutubeGetTopThreeVideosCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "prompt": "${prompt}",
-  "recency": ${recency}
+  "prompt": "$prompt",
+  "recency": $recency
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'YoutubeGetTopThreeVideos',
@@ -180,6 +184,7 @@ class YoutubeGetTopThreeVideosCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 }
